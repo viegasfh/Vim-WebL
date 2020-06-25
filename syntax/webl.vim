@@ -7,14 +7,14 @@ if exists("b:current_syntax")
   finish
 endif
 
-" Keywords
-syn keyword weblKeywords import export var nil true false div mod and or member
-syn keyword weblKeywords inside directlyinside contain
-syn keyword weblKeywords directlycontain after directlyafter
-syn keyword weblKeywords before directlybefore
-syn keyword weblKeywords overlap without while do end if then end else elsif fun
-syn keyword welbKeywords meth try catch on do every in lock repeat until begin return
-
 let b:current_syntax = "webl"
+
+" Keywords
+syntax keyword weblKeywords import export var nil true false div mod and or member
+syntax keyword weblKeywords inside directlyinside contain
+syntax keyword weblKeywords directlycontain after directlyafter
+syntax keyword weblKeywords before directlybefore
+syntax keyword weblKeywords overlap without while do end if then end else elsif fun
+syntax keyword welbKeywords meth try catch on do every in lock repeat until begin return
 
 highlight link weblKeywords Keyword
