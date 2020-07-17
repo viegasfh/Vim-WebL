@@ -25,5 +25,5 @@ syntax region weblString start=/"/ skip=/\\"/ end=/"/
 syntax region weblComment start=/\/\/.*/ end=/$/
 
 highlight link weblKeywords Keyword
-lighlight link weblComment Comment
+highlight link weblComment Comment
 highlight link weblString String
