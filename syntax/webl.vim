@@ -29,9 +29,11 @@ syntax keyword weblStatement fun meth do
 syntax keyword weblStatement begin end return
 syntax keyword weblConstant nil
 
+syntax match weblComment '//.*'
+
 " Regions
 syntax region weblString start=/"/ skip=/\\"/ end=/"/
-syntax region weblComment start=/\/\/.*/ end=/$/
+syntax region weblComment start='/\*' end='\*/'
 
 highlight link weblKeywords Keyword
 highlight link weblComment Comment
