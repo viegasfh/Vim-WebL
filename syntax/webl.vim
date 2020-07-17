@@ -13,18 +13,21 @@ let b:current_syntax = "webl"
 syntax case match
 
 " Keywords
-syntax keyword weblKeywords export var nil div mod
-syntax keyword weblKeywords inside directlyinside contain
-syntax keyword weblKeywords directlycontain after directlyafter
-syntax keyword weblKeywords before directlybefore
-syntax keyword weblKeywords overlap without do end fun
-syntax keyword weblKeywords meth try catch on do every in lock repeat until begin return
+syntax keyword weblStatement export var 
+syntax keyword weblOperator inside directlyinside contain
+syntax keyword weblOperator directlycontain after directlyafter
+syntax keyword weblOperator before directlybefore div mod
+syntax keyword weblOperator overlap without in on
+syntax keyword weblKeywords lock 
+syntax keyword weblException try catch
 syntax keyword weblConditional if then else elsif
 syntax keyword weblLogical and or member
-syntax keyword weblLoops every in do while
-syntax keyword weblProgramFlow end return
+syntax keyword weblLoops every while repeat until
 syntax keyword weblImport import
 syntax keyword weblBoolean true false
+syntax keyword weblStatement fun meth do
+syntax keyword weblStatement begin end return
+syntax keyword weblConstant nil
 
 " Regions
 syntax region weblString start=/"/ skip=/\\"/ end=/"/
@@ -35,7 +38,10 @@ highlight link weblComment Comment
 highlight link weblString String
 highlight link weblConditional Conditional
 highlight link weblLogical Conditional
-highlight link weblProgramFlow Statement
 highlight link weblImport Include
 highlight link weblBoolean Boolean
 highlight link weblLoops Repeat
+highlight link weblStatement Statement
+highlight link weblConstant Constant
+highlight link weblOperator Operator
+highlight link weblException Exception
